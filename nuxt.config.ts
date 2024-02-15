@@ -1,4 +1,18 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true }
+  css: [
+    'element-plus/dist/index.css',
+    '~/assets/css/main.css'
+  ],
+  devtools: { enabled: true },
+  modules: [
+    '@element-plus/nuxt',
+    '@pinia/nuxt'
+  ],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  }
 })
